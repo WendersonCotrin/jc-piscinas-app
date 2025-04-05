@@ -225,9 +225,20 @@ input[type="text"] {
     object-fit: cover;
 }
 
-.price {
+/* SE NÃO MUDAR NADA VOU TIRAR DEPOIS*/
+/*.price {
     white-space: nowrap; /* Impede a quebra de linha */
-    overflow: hidden; /* Evita que o texto ultrapasse o contêiner */
-    text-overflow: ellipsis; /* Adiciona "..." caso o texto seja muito grande */
-    max-width: 100%; /* Garante que ele ocupe todo o espaço disponível */
+    /*overflow: hidden; /* Evita que o texto ultrapasse o contêiner */
+    /*text-overflow: ellipsis; /* Adiciona "..." caso o texto seja muito grande */
+    /*max-width: 100%; /* Garante que ele ocupe todo o espaço disponível */
+/*}*/
+
+.nome-rating {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.color-gray {
+    color: gray;
 }
