@@ -32,7 +32,7 @@ var app = new Framework7({
         pageInit: function (event, page) {
           // fazer algo quando a página for inicializada
           app.views.main.router.navigate('/detalhes/');
-          $.getScript('js/index');
+          $.getScript('js/index.js');
 
           var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
@@ -169,7 +169,6 @@ var app = new Framework7({
         },
         pageBeforeRemove: function (event, page) {
           // fazer algo antes da página ser removida do DOM
-          $.getScript('js.index.js');
 
         },
       }
