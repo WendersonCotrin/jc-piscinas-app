@@ -4,10 +4,14 @@
     --branco: #ffffff --gelo: #f1f1f1 --preto: #00000f
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .toolbar {
@@ -43,17 +47,60 @@ body {
 }
 
 .topo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #0099cc;
+    /* Azul piscina 💧 */
     width: 100%;
-    height: 60px;
-    background-color: var(--branco);
+    height: 70px;
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.titulo-topo {
-    font-weight: 600;
-    margin-left: 5%;
+.logo-nome {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    letter-spacing: 2px;
+    position: relative;
+    color: #0099cc;
+    text-transform: uppercase;
+  }
+  
+  .logo-nome::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 2px;     /* ajuste fino */
+    left: 2px;    /* ajuste fino */
+    z-index: -1;
+    color: rgba(0, 0, 0, 0.3);
+    filter: blur(3.5px);
+    pointer-events: none; /* só por segurança */
+  }
+  
+
+
+.logo-nome span {
+    background: linear-gradient(to right, #00bcd4, #03a9f4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+
+
+//*.titulo-topo {
+font-weight: 600;
+margin-left: 5%;
 
 }
 
@@ -146,30 +193,30 @@ input[type="text"] {
 .swiper {
     width: 100%;
     height: 100%;
-  }
+}
 
-  .swiper-slide {
+.swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .swiper-slide img {
+.swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
 
-  .block {
+.block {
     margin-left: 2%;
     margin-right: 2%;
-  }
+}
 
-  .filter-btn{
+.filter-btn {
     width: 100%;
     height: 35px;
     background: none;
@@ -179,59 +226,60 @@ input[type="text"] {
     overflow: hidden;
     text-overflow: ellipsis;
 
-  }
+}
 
-  .row{
+.row {
     flex-wrap: wrap;
     flex-direction: row;
-  }
-
-  .item{
-    color: #000000;
-  }
-
-  .item-lista {
-    display: flex;
-    flex-wrap: wrap; /* Permite quebrar para próxima linha */
-    gap: 10px; /* Espaço entre os itens */
-    justify-content: flex-start; /* Mantém os itens juntos no topo */
-    align-items: stretch; /* Faz os itens ocuparem a mesma altura */
 }
 
 .item {
-    width: calc(50% - 10px); /* Ajusta para garantir 2 por linha */
-    background: #f5f5f5;
-    padding: 10px;
+    color: #000000;
+}
+
+.item-lista {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite quebrar para próxima linha */
+    gap: 10px;
+    /* Espaço entre os itens */
+    justify-content: flex-start;
+    /* Mantém os itens juntos no topo */
+    align-items: stretch;
+    /* Faz os itens ocuparem a mesma altura */
+}
+
+.item {
+    width: calc(50% - 10px);
+    /* Ajusta para garantir 2 por linha */
+    padding: 6px;
+    margin-top: 20px;
     border-radius: 5px;
     text-align: center;
-    box-sizing: border-box; /* Evita que padding/margin alterem a largura */
+    box-sizing: border-box;
+    /* Evita que padding/margin alterem a largura */
     display: flex;
-    flex-direction: column; /* Organiza os elementos dentro do item */
-    align-items: center; /* Centraliza os itens */
+    flex-direction: column;
+    /* Organiza os elementos dentro do item */
+    align-items: center;
+    /* Centraliza os itens */
 }
 
 .img-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 180px;
+    width: 80%;
+    padding: 9px;
+    height: 150px;
     border-radius: 10px;
-    background: ghostwhite;
+    background: rgb(242, 242, 242);
 }
 
 .img-container img {
     max-width: 150px;
     object-fit: cover;
 }
-
-/* SE NÃO MUDAR NADA VOU TIRAR DEPOIS*/
-/*.price {
-    white-space: nowrap; /* Impede a quebra de linha */
-    /*overflow: hidden; /* Evita que o texto ultrapasse o contêiner */
-    /*text-overflow: ellipsis; /* Adiciona "..." caso o texto seja muito grande */
-    /*max-width: 100%; /* Garante que ele ocupe todo o espaço disponível */
-/*}*/
 
 .nome-rating {
     display: flex;
@@ -241,4 +289,24 @@ input[type="text"] {
 
 .color-gray {
     color: gray;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+.infor {
+    font-size: 12;
+}
+
+@media (min-width:992px) {
+    .item-lista {
+        flex:30%;
+    }
+}
+
+@media (min-width:1200px) {
+    .item-lista {
+        flex:20%;
+    }
 }
